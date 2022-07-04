@@ -65,9 +65,14 @@
                   </div>
                   <hr class="mt-6 border-b-1 border-gray-400" />
                 </div>
-                <form action="/dashboard" method="get">
+                <form action="/dashboard" method="post">
                 <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
                   <div class="text-gray-500 text-center mb-3 font-bold">
+                    <% if (messages.error) { %>
+                      <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                        <strong class="font-bold"><%- messages.error %></strong>
+                      </div>
+                      <% } %>
                     <small>Or sign in with credentials</small>
                   </div>
                     <div class="relative w-full mb-3">
@@ -80,6 +85,7 @@
                         class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                         placeholder="Email"
                         style="transition: all 0.15s ease 0s;"
+                        name="email"
                       />
                     </div>
                     <div class="relative w-full mb-3">
@@ -92,6 +98,7 @@
                         class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                         placeholder="Password"
                         style="transition: all 0.15s ease 0s;"
+                        name="password"
                       />
                     </div>
                     <div>

@@ -13,10 +13,10 @@
                       <div class="flex flex-wrap">
                         <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                           <h5 class="text-blueGray-400 uppercase font-bold text-xs">
-                            Traffic
+                            Total clientes activos
                           </h5>
                           <span class="font-semibold text-xl text-blueGray-700">
-                            350,897
+                            <%= dataCantidad %>
                           </span>
                         </div>
                         <div class="relative w-auto pl-4 flex-initial">
@@ -42,10 +42,10 @@
                       <div class="flex flex-wrap">
                         <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                           <h5 class="text-blueGray-400 uppercase font-bold text-xs">
-                            New users
+                            Saldo total clientes
                           </h5>
                           <span class="font-semibold text-xl text-blueGray-700">
-                            2,356
+                            <%= dataSaldo %>
                           </span>
                         </div>
                         <div class="relative w-auto pl-4 flex-initial">
@@ -123,6 +123,9 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div>
+                <%- include('chart/chartbar') %>
               </div>
             </div>
           </div>
